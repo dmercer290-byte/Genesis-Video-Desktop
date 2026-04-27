@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "models": [
+    {
+      "id": "ltx-video-2.1-server",
+      "name": "LTX Video 2.1 (Server)",
+      "engine": "ltx",
+      "modes": ["text-to-video", "image-to-video"],
+      "checkpoint_path": "/models/ltx/ltxv-2-0-1-dev-04-25.safetensors",
+      "vae_path": null,
+      "text_encoder_path": null,
+      "adapters": [],
+      "workflow_path": null,
+      "vram_required_gb": 16,
+      "resolutions": ["512x512", "768x512", "1024x576"],
+      "max_duration_seconds": 10,
+      "fps": 24,
+      "server_target": "http://100.90.93.123:8000"
+    },
+    {
+      "id": "animatediff-meinamix-comfy",
+      "name": "AnimateDiff + MeinaMix (ComfyUI)",
+      "engine": "comfy",
+      "modes": ["text-to-video", "image-to-video"],
+      "checkpoint_path": "meinamix_v12Final.safetensors",
+      "vae_path": null,
+      "text_encoder_path": null,
+      "adapters": [],
+      "workflow_path": "workflows/animatediff_basic.json",
+      "vram_required_gb": 8,
+      "resolutions": ["512x512", "768x512"],
+      "max_duration_seconds": 5,
+      "fps": 8,
+      "server_target": "http://100.108.182.67:8188"
+    }
+  ]
+}
